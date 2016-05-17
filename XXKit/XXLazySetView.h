@@ -29,9 +29,9 @@ self.labelName.numberOfLines = lines;
 
 
 //LazySetButton 图片按钮
-#define XXLazySetButton(buttonName,target,action,titleString,imageName1,imageName2,tagNum) \
+#define XXLazySetButton(buttonName,target,mothed,titleString,imageName1,imageName2,tagNum) \
 self.buttonName.tag = tagNum;\
-[self.buttonName addTarget:target action:@selector(action) forControlEvents:UIControlEventTouchUpInside];\
+[self.buttonName addTarget:target action:@selector(mothed) forControlEvents:UIControlEventTouchUpInside];\
 if (titleString) {[self.buttonName setTitle:titleString forState:UIControlStateNormal];}\
 if (imageName1) {[self.buttonName setBackgroundImage:[UIImage imageNamed:imageName1] forState:UIControlStateNormal];}\
 if (imageName2) {[self.buttonName setBackgroundImage:[UIImage imageNamed:imageName2] forState:UIControlStateHighlighted];}
@@ -80,7 +80,7 @@ UIBarButtonItem*rightItem = [[UIBarButtonItem alloc]initWithCustomView:rightTitl
 self.navigationItem.rightBarButtonItem = rightItem;\
 
 //设置cell被选择背景颜色
-#define KINGCellSetSelectedColor \
+#define XXLazySetCellSelectedColor \
 cell.selectedBackgroundView = [[UIView alloc] initWithFrame:cell.bounds];\
 cell.selectedBackgroundView.backgroundColor = [UIColor kdxCellSelectedBackgroundColor];
 
