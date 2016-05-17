@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 //通用view
-#define KINGLazyAnyView(superView,viewName,class)  \
+#define XXLazyAnyView(superView,viewName,class)  \
 -(class *)viewName {\
 if (_##viewName == nil) {\
 class *view = [[class alloc]init];\
@@ -20,18 +20,18 @@ return _##viewName;}
 
 //常用系统 view 创建
 
-#define KINGLazyView(superView,viewName)        KINGLazyAnyView(superView, viewName, UIView)
-#define KINGLazyLabel(superView,viewName)       KINGLazyAnyView(superView, viewName, UILabel)
-#define KINGLazyButton(superView,viewName)      KINGLazyAnyView(superView, viewName, UIButton)
-#define KINGLazyImageView(superView,viewName)   KINGLazyAnyView(superView, viewName, UIImageView)
-#define KINGLazyTextField(superView,viewName)   KINGLazyAnyView(superView, viewName, UITextField)
-#define KINGLazyTextView(superView,viewName)    KINGLazyAnyView(superView, viewName, UITextView)
-#define KINGLazyTableView(superView,viewName)   KINGLazyAnyView(superView, viewName, UITableView)
+#define XXLazyView(superView,viewName)        XXLazyAnyView(superView, viewName, UIView)
+#define XXLazyLabel(superView,viewName)       XXLazyAnyView(superView, viewName, UILabel)
+#define XXLazyButton(superView,viewName)      XXLazyAnyView(superView, viewName, UIButton)
+#define XXLazyImageView(superView,viewName)   XXLazyAnyView(superView, viewName, UIImageView)
+#define XXLazyTextField(superView,viewName)   XXLazyAnyView(superView, viewName, UITextField)
+#define XXLazyTextView(superView,viewName)    XXLazyAnyView(superView, viewName, UITextView)
+#define XXLazyTableView(superView,viewName)   XXLazyAnyView(superView, viewName, UITableView)
 
 
 
 //以背景颜色懒加载按钮
-#define KINGLazyButtonWithColor(superView,buttonName,title,color1,color2,tagNum) \
+#define XXLazyButtonWithColor(superView,buttonName,title,color1,color2,tagNum) \
 - (UIButton *)buttonName {\
 if (_##buttonName == nil) {\
 UIButton *button = [[UIButton alloc]init];\

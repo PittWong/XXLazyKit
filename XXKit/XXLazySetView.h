@@ -10,7 +10,7 @@
 
 
 //LazySetTableView
-#define KINGLazySetTableView(cellClass,reusedId,bgColor) \
+#define XXLazySetTableView(cellClass,reusedId,bgColor) \
 self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;\
 self.tableView.showsVerticalScrollIndicator = NO;\
 self.tableView.bounces = NO;\
@@ -21,7 +21,7 @@ if (bgColor) {self.tableView.backgroundColor = bgColor;}\
 
 
 //LazySetLabel
-#define KINGLazySetLabel(labelName,txtColor,fontSize,title,lines) \
+#define XXLazySetLabel(labelName,txtColor,fontSize,title,lines) \
 self.labelName.textColor = txtColor;\
 self.labelName.font = [UIFont systemFontOfSize:fontSize];\
 self.labelName.text = title;\
@@ -29,7 +29,7 @@ self.labelName.numberOfLines = lines;
 
 
 //LazySetButton 图片按钮
-#define KINGLazySetButton(buttonName,target,action,titleString,imageName1,imageName2,tagNum) \
+#define XXLazySetButton(buttonName,target,action,titleString,imageName1,imageName2,tagNum) \
 self.buttonName.tag = tagNum;\
 [self.buttonName addTarget:target action:@selector(action) forControlEvents:UIControlEventTouchUpInside];\
 if (titleString) {[self.buttonName setTitle:titleString forState:UIControlStateNormal];}\
@@ -37,7 +37,7 @@ if (imageName1) {[self.buttonName setBackgroundImage:[UIImage imageNamed:imageNa
 if (imageName2) {[self.buttonName setBackgroundImage:[UIImage imageNamed:imageName2] forState:UIControlStateHighlighted];}
 
 //BorderAndCorner 圆角view
-#define KINGLazySetViewBorderAndCorner(viewName,radius,bordColor,bgColor) \
+#define XXLazySetViewBorderAndCorner(viewName,radius,bordColor,bgColor) \
 self.viewName.layer.cornerRadius = radius;\
 self.viewName.layer.masksToBounds = YES;\
 self.viewName.layer.borderWidth = 1;\
@@ -48,7 +48,7 @@ self.viewName.backgroundColor = bgColor;
 
 //懒加载控件
 //leftButtonItem
-#define KINGLazySetLeftItemWithImage(imageName,mothed) \
+#define XXLazySetLeftItemWithImage(imageName,mothed) \
 UIButton * leftImageButton = [[UIButton alloc]init];\
 leftImageButton.frame = CGRectMake(0,0,35,35);\
 [leftImageButton setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];\
@@ -59,7 +59,7 @@ self.navigationItem.leftBarButtonItem = leftItem;
 
 //rightButtonItem
 
-#define KINGLazySetRightItemWithImage(imageName,mothed) \
+#define XXLazySetRightItemWithImage(imageName,mothed) \
 UIButton * rightImageButton = [[UIButton alloc]init];\
 rightImageButton.frame = CGRectMake(0,0,35,35);\
 [rightImageButton setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];\
@@ -69,7 +69,7 @@ self.navigationItem.rightBarButtonItem = rightItem;
 
 
 //rightButtonItem
-#define KINGLazySetRightItemWithTitle(title,mothed) \
+#define XXLazySetRightItemWithTitle(title,mothed) \
 UIButton * rightTitleButton = [[UIButton alloc]init];\
 [rightTitleButton setTitle:title forState:UIControlStateNormal];\
 [rightTitleButton addTarget:self action:@selector(mothed) forControlEvents:UIControlEventTouchUpInside];\
@@ -86,7 +86,7 @@ cell.selectedBackgroundView.backgroundColor = [UIColor kdxCellSelectedBackground
 
 
 //MARK:设置cell阴影
-#define KINGLazySetCellShadow \
+#define XXLazySetCellShadow \
 cell.layer.shadowOffset = CGSizeMake(0, 1);\
 cell.layer.shadowColor = [UIColor grayColor].CGColor;\
 cell.layer.shadowRadius = 1;\
