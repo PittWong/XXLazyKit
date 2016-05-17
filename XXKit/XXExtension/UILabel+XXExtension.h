@@ -1,5 +1,5 @@
 //
-//  UIColor+XXExtension.h
+//  UILabel+XXExtension.h
 //  XXKitDemo
 //
 //  Created by 王旭 on 16/5/17.
@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIColor (XXExtension)
+@interface UILabel (XXExtension)
+
+- (void) textLeftTopAlign: (NSString *)desc;
+
++ (instancetype)circleLabel;
 
 @end
