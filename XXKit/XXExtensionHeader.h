@@ -17,6 +17,8 @@ FOUNDATION_EXPORT const unsigned char XXKitVersionString[];
 #import <XXKit/UILabel+XXExtension.h>
 #import <XXKit/UIView+XXExtension.h>
 
+#import <XXKit/XXLazySetView.h>
+#import <XXKit/XXLazyCreateView.h>
 
 
 #else
@@ -29,6 +31,10 @@ FOUNDATION_EXPORT const unsigned char XXKitVersionString[];
 #import "UIFont+XXExtension.h"
 #import "UILabel+XXExtension.h"
 #import "UIView+XXExtension.h"
+
+#import "XXLazySetView.h"
+#import "XXLazyCreateView.h"
+
 
 
 #endif
