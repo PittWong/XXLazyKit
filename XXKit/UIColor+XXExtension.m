@@ -8,13 +8,7 @@
 
 #import "UIColor+XXExtension.h"
 
-//颜色模型
-@interface ColorModel : NSObject
-@property (nonatomic,assign) int R;
-@property (nonatomic,assign) int G;
-@property (nonatomic,assign) int B;
-@property (nonatomic,assign) CGFloat alpha;
-@end
+
 
 @implementation ColorModel
 
