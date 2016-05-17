@@ -75,6 +75,7 @@
 		521EAAA51CEB151600BD8F31 /* UILabel+XXExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+XXExtension.m"; sourceTree = "<group>"; };
 		521EAAA61CEB151600BD8F31 /* UIView+XXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XXExtension.h"; sourceTree = "<group>"; };
 		521EAAA71CEB151600BD8F31 /* UIView+XXExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XXExtension.m"; sourceTree = "<group>"; };
+		521EAAB11CEB15E700BD8F31 /* XXExtensionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXExtensionHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +169,15 @@
 		521EAA2A1CEAE70100BD8F31 /* XXKit */ = {
 			isa = PBXGroup;
 			children = (
+				521EAAB01CEB157A00BD8F31 /* XXExtension */,
+			);
+			path = XXKit;
+			sourceTree = SOURCE_ROOT;
+		};
+		521EAAB01CEB157A00BD8F31 /* XXExtension */ = {
+			isa = PBXGroup;
+			children = (
+				521EAAB11CEB15E700BD8F31 /* XXExtensionHeader.h */,
 				521EAA981CEB151600BD8F31 /* NSDate+XXExtension.h */,
 				521EAA991CEB151600BD8F31 /* NSDate+XXExtension.m */,
 				521EAA9A1CEB151600BD8F31 /* NSString+XXExtension.h */,
@@ -185,8 +195,8 @@
 				521EAAA61CEB151600BD8F31 /* UIView+XXExtension.h */,
 				521EAAA71CEB151600BD8F31 /* UIView+XXExtension.m */,
 			);
-			path = XXKit;
-			sourceTree = SOURCE_ROOT;
+			name = XXExtension;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
