@@ -44,4 +44,5 @@
     [dateFormatter setDateFormat:formatter];
     return dateFormatter;
 }
+
 @end

@@ -23,6 +23,8 @@
 		521EAAAD1CEB151600BD8F31 /* UIFont+XXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 521EAAA31CEB151600BD8F31 /* UIFont+XXExtension.m */; };
 		521EAAAE1CEB151600BD8F31 /* UILabel+XXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 521EAAA51CEB151600BD8F31 /* UILabel+XXExtension.m */; };
 		521EAAAF1CEB151600BD8F31 /* UIView+XXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 521EAAA71CEB151600BD8F31 /* UIView+XXExtension.m */; };
+		52BA2B8F1CEB380F00D87E2D /* XXLazySetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BA2B8E1CEB380F00D87E2D /* XXLazySetView.m */; };
+		52BA2B921CEB383200D87E2D /* XXLazyCreateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BA2B911CEB383200D87E2D /* XXLazyCreateView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,10 @@
 		521EAAA61CEB151600BD8F31 /* UIView+XXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XXExtension.h"; sourceTree = "<group>"; };
 		521EAAA71CEB151600BD8F31 /* UIView+XXExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XXExtension.m"; sourceTree = "<group>"; };
 		521EAAB11CEB15E700BD8F31 /* XXExtensionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXExtensionHeader.h; sourceTree = "<group>"; };
+		52BA2B8D1CEB380F00D87E2D /* XXLazySetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXLazySetView.h; sourceTree = "<group>"; };
+		52BA2B8E1CEB380F00D87E2D /* XXLazySetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXLazySetView.m; sourceTree = "<group>"; };
+		52BA2B901CEB383200D87E2D /* XXLazyCreateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXLazyCreateView.h; sourceTree = "<group>"; };
+		52BA2B911CEB383200D87E2D /* XXLazyCreateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXLazyCreateView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +175,7 @@
 		521EAA2A1CEAE70100BD8F31 /* XXKit */ = {
 			isa = PBXGroup;
 			children = (
+				521EAAB41CEB1CBC00BD8F31 /* XXLazy */,
 				521EAAB01CEB157A00BD8F31 /* XXExtension */,
 			);
 			path = XXKit;
@@ -196,6 +203,17 @@
 				521EAAA71CEB151600BD8F31 /* UIView+XXExtension.m */,
 			);
 			name = XXExtension;
+			sourceTree = "<group>";
+		};
+		521EAAB41CEB1CBC00BD8F31 /* XXLazy */ = {
+			isa = PBXGroup;
+			children = (
+				52BA2B8D1CEB380F00D87E2D /* XXLazySetView.h */,
+				52BA2B8E1CEB380F00D87E2D /* XXLazySetView.m */,
+				52BA2B901CEB383200D87E2D /* XXLazyCreateView.h */,
+				52BA2B911CEB383200D87E2D /* XXLazyCreateView.m */,
+			);
+			name = XXLazy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +348,7 @@
 			files = (
 				521EAAAF1CEB151600BD8F31 /* UIView+XXExtension.m in Sources */,
 				521EAAA91CEB151600BD8F31 /* NSString+XXExtension.m in Sources */,
+				52BA2B921CEB383200D87E2D /* XXLazyCreateView.m in Sources */,
 				521EAAAB1CEB151600BD8F31 /* UIButton+XXExtension.m in Sources */,
 				521EA9FC1CEAE52300BD8F31 /* ViewController.m in Sources */,
 				521EAAAA1CEB151600BD8F31 /* UIBarButtonItem+XXExtension.m in Sources */,
@@ -338,6 +357,7 @@
 				521EAAAE1CEB151600BD8F31 /* UILabel+XXExtension.m in Sources */,
 				521EAAAC1CEB151600BD8F31 /* UIColor+XXExtension.m in Sources */,
 				521EAAA81CEB151600BD8F31 /* NSDate+XXExtension.m in Sources */,
+				52BA2B8F1CEB380F00D87E2D /* XXLazySetView.m in Sources */,
 				521EA9F61CEAE52300BD8F31 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
