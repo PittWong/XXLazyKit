@@ -1,18 +1,18 @@
 //
-//  XXKitDemoTests.m
-//  XXKitDemoTests
+//  DemoTests.m
+//  DemoTests
 //
-//  Created by 王旭 on 16/5/17.
-//  Copyright © 2016年 pitt. All rights reserved.
+//  Created by 王旭 on 16/5/18.
+//  Copyright © 2016年 Pitt. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface XXKitDemoTests : XCTestCase
+@interface DemoTests : XCTestCase
 
 @end
 
-@implementation XXKitDemoTests
+@implementation DemoTests
 
 - (void)setUp {
     [super setUp];
