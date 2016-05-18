@@ -2,9 +2,9 @@
 
 Pod::Spec.new do |s|
 
-s.name             = "XXKit"
+s.name             = "XXLazyKit"
 
-s.version          = "1.0.1"
+s.version          = "1.0.0"
 
 s.summary          = "A marquee view used on iOS."
 
@@ -14,7 +14,7 @@ It is a marquee view used on iOS, which implement by Objective-C.
 
 DESC
 
-s.homepage         = "https://github.com/PittWong/XXKit"
+s.homepage         = "https://github.com/PittWong/XXLazyKit"
 
 # s.screenshots      = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
 
@@ -22,7 +22,7 @@ s.license          = 'MIT'
 
 s.author           = { "PittWong" => "1030046166@qq.com" }
 
-s.source           = { :git => "https://github.com/PittWong/XXKit.git", :tag => s.version.to_s }
+s.source           = { :git => "https://github.com/PittWong/XXLazyKit.git", :tag => s.version.to_s }
 
 # s.social_media_url = 'http://home.cnblogs.com/u/890814/'
 
@@ -38,7 +38,7 @@ s.requires_arc = true
 
 
 
-s.source_files = 'XXKit/*'
+s.source_files = 'XXLazyKit/*'
 
 # s.resources = 'Assets'
 
