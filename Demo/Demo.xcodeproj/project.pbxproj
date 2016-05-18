@@ -61,7 +61,7 @@
 		52482F1E1CEC00F30094734A /* UILabel+XXExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+XXExtension.m"; sourceTree = "<group>"; };
 		52482F1F1CEC00F30094734A /* UIView+XXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XXExtension.h"; sourceTree = "<group>"; };
 		52482F201CEC00F30094734A /* UIView+XXExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XXExtension.m"; sourceTree = "<group>"; };
-		52482F211CEC00F30094734A /* XXExtensionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXExtensionHeader.h; sourceTree = "<group>"; };
+		52482F211CEC00F30094734A /* XXLazyKitHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXLazyKitHeader.h; sourceTree = "<group>"; };
 		52482F221CEC00F30094734A /* XXLazyCreateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXLazyCreateView.h; sourceTree = "<group>"; };
 		52482F231CEC00F30094734A /* XXLazyCreateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXLazyCreateView.m; sourceTree = "<group>"; };
 		52482F241CEC00F30094734A /* XXLazySetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXLazySetView.h; sourceTree = "<group>"; };
@@ -112,6 +112,16 @@
 		52482F101CEC00F30094734A /* XXLazyKit */ = {
 			isa = PBXGroup;
 			children = (
+				52482F211CEC00F30094734A /* XXLazyKitHeader.h */,
+				52482F301CEC036F0094734A /* Extension */,
+				52482F311CEC037C0094734A /* Lazy */,
+			);
+			path = XXLazyKit;
+			sourceTree = "<group>";
+		};
+		52482F301CEC036F0094734A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
 				52482F111CEC00F30094734A /* NSDate+XXExtension.h */,
 				52482F121CEC00F30094734A /* NSDate+XXExtension.m */,
 				52482F131CEC00F30094734A /* NSString+XXExtension.h */,
@@ -128,13 +138,19 @@
 				52482F1E1CEC00F30094734A /* UILabel+XXExtension.m */,
 				52482F1F1CEC00F30094734A /* UIView+XXExtension.h */,
 				52482F201CEC00F30094734A /* UIView+XXExtension.m */,
-				52482F211CEC00F30094734A /* XXExtensionHeader.h */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
+		52482F311CEC037C0094734A /* Lazy */ = {
+			isa = PBXGroup;
+			children = (
 				52482F221CEC00F30094734A /* XXLazyCreateView.h */,
 				52482F231CEC00F30094734A /* XXLazyCreateView.m */,
 				52482F241CEC00F30094734A /* XXLazySetView.h */,
 				52482F251CEC00F30094734A /* XXLazySetView.m */,
 			);
-			path = XXLazyKit;
+			name = Lazy;
 			sourceTree = "<group>";
 		};
 		841D209E1CEB96E9002B6074 = {
