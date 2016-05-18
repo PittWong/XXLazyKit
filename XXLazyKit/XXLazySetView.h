@@ -28,13 +28,21 @@ self.labelName.text = title;\
 self.labelName.numberOfLines = lines;
 
 
-//LazySetButton 图片按钮
-#define XXLazySetButton(buttonName,target,mothed,titleString,imageName1,imageName2,tagNum) \
+//LazySetButton title按钮
+#define XXLazySetTitleButton(buttonName,target,tagNum,mothed,fontSize,titleColor,titleString) \
 self.buttonName.tag = tagNum;\
+if (fontSize) {self.buttonName.titleLabel.font = [UIFont systemFontOfSize:fontSize];}\
+[self.buttonName setTitleColor:titleColor forState:UIControlStateNormal];\
 [self.buttonName addTarget:target action:@selector(mothed) forControlEvents:UIControlEventTouchUpInside];\
 if (titleString) {[self.buttonName setTitle:titleString forState:UIControlStateNormal];}\
-if (imageName1) {[self.buttonName setBackgroundImage:[UIImage imageNamed:imageName1] forState:UIControlStateNormal];}\
-if (imageName2) {[self.buttonName setBackgroundImage:[UIImage imageNamed:imageName2] forState:UIControlStateHighlighted];}
+
+//图片按钮
+#define XXLazySetImageButton(buttonName,target,tagNum,mothed,normalImage,highImage) \
+self.buttonName.tag = tagNum;\
+[self.buttonName addTarget:target action:@selector(mothed) forControlEvents:UIControlEventTouchUpInside];\
+if (normalImage) {[self.buttonName setBackgroundImage:[UIImage imageNamed:normalImage] forState:UIControlStateNormal];}\
+if (highImage) {[self.buttonName setBackgroundImage:[UIImage imageNamed:highImage] forState:UIControlStateHighlighted];}
+
 
 //BorderAndCorner 圆角view
 #define XXLazySetViewBorderAndCorner(viewName,radius,bordColor,bgColor) \
