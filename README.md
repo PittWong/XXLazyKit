@@ -14,7 +14,7 @@
 XXLazyButton(self.view, button)
 
 XXLazyTableView(self.view, tableView)
-//
+
 ```
 
 ####快速设置控件属性
