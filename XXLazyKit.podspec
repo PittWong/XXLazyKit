@@ -50,7 +50,7 @@ s.source_files = 'XXLazyKit/*'
 
 # s.public_header_files = 'Classes/**/*.h'
 
-s.frameworks = 'Foundation', 'CoreGraphics', 'UIKit'
+s.frameworks = 'Foundation', 'CoreGraphics', 'UIKit','Masonry'
 
 
 
