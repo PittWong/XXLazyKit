@@ -16,9 +16,11 @@
 
 + (UIColor *) randomColor;
 
-+ (UIColor *) textColor333333;          //333333
-+ (UIColor *) textColor666666;          //666666
-+ (UIColor *) textColor7c7c7c;          //7c7c7c
-+ (UIColor *) textColor999999;          //999999
-+ (UIColor *) textColoraaaaaa;          //aaaaaa
++ (UIColor *) xxLineColor;                //e5e5e5
++ (UIColor *) xxTextColor333333;          //333333
++ (UIColor *) xxTextColor666666;          //666666
++ (UIColor *) xxTextColor7c7c7c;          //7c7c7c
++ (UIColor *) xxTextColor999999;          //999999
++ (UIColor *) xxTextColoraaaaaa;          //aaaaaa
+
 @end

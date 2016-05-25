@@ -27,6 +27,10 @@
 		5257F8DB1CF5A75100CF3849 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5257F8CE1CF5A75100CF3849 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		5257F8DC1CF5A75100CF3849 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5257F8D01CF5A75100CF3849 /* View+MASAdditions.m */; };
 		5257F8DD1CF5A75100CF3849 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5257F8D31CF5A75100CF3849 /* ViewController+MASAdditions.m */; };
+		52CEE58B1CF5B58900C1D02C /* XXButtonReplaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52CEE58A1CF5B58900C1D02C /* XXButtonReplaceCell.m */; };
+		52CEE58F1CF5B86E00C1D02C /* XXLazyArrowr.png in Resources */ = {isa = PBXBuildFile; fileRef = 52CEE58C1CF5B86E00C1D02C /* XXLazyArrowr.png */; };
+		52CEE5901CF5B86E00C1D02C /* XXLazyArrowr@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52CEE58D1CF5B86E00C1D02C /* XXLazyArrowr@2x.png */; };
+		52CEE5911CF5B86E00C1D02C /* XXLazyArrowr@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52CEE58E1CF5B86E00C1D02C /* XXLazyArrowr@3x.png */; };
 		841D20AC1CEB96EA002B6074 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 841D20AB1CEB96EA002B6074 /* main.m */; };
 		841D20AF1CEB96EA002B6074 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 841D20AE1CEB96EA002B6074 /* AppDelegate.m */; };
 		841D20B21CEB96EA002B6074 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841D20B11CEB96EA002B6074 /* ViewController.m */; };
@@ -101,6 +105,11 @@
 		5257F8D11CF5A75100CF3849 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		5257F8D21CF5A75100CF3849 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		5257F8D31CF5A75100CF3849 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		52CEE5891CF5B58900C1D02C /* XXButtonReplaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXButtonReplaceCell.h; sourceTree = "<group>"; };
+		52CEE58A1CF5B58900C1D02C /* XXButtonReplaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXButtonReplaceCell.m; sourceTree = "<group>"; };
+		52CEE58C1CF5B86E00C1D02C /* XXLazyArrowr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XXLazyArrowr.png; sourceTree = "<group>"; };
+		52CEE58D1CF5B86E00C1D02C /* XXLazyArrowr@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "XXLazyArrowr@2x.png"; sourceTree = "<group>"; };
+		52CEE58E1CF5B86E00C1D02C /* XXLazyArrowr@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "XXLazyArrowr@3x.png"; sourceTree = "<group>"; };
 		841D20A71CEB96EA002B6074 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		841D20AB1CEB96EA002B6074 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		841D20AD1CEB96EA002B6074 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -148,7 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				52482F451CEC08340094734A /* XXLazyKitHeader.h */,
-				5257F8B91CF5A6F100CF3849 /* XXKit */,
+				52CEE5881CF5B4D200C1D02C /* XXView */,
 				52482F521CEC08440094734A /* XXLazy */,
 				52482F531CEC08530094734A /* Extension */,
 			);
@@ -190,13 +199,6 @@
 			name = Extension;
 			sourceTree = "<group>";
 		};
-		5257F8B91CF5A6F100CF3849 /* XXKit */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = XXKit;
-			sourceTree = "<group>";
-		};
 		5257F8BA1CF5A75100CF3849 /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +229,18 @@
 				5257F8D31CF5A75100CF3849 /* ViewController+MASAdditions.m */,
 			);
 			path = Masonry;
+			sourceTree = "<group>";
+		};
+		52CEE5881CF5B4D200C1D02C /* XXView */ = {
+			isa = PBXGroup;
+			children = (
+				52CEE5891CF5B58900C1D02C /* XXButtonReplaceCell.h */,
+				52CEE58A1CF5B58900C1D02C /* XXButtonReplaceCell.m */,
+				52CEE58C1CF5B86E00C1D02C /* XXLazyArrowr.png */,
+				52CEE58D1CF5B86E00C1D02C /* XXLazyArrowr@2x.png */,
+				52CEE58E1CF5B86E00C1D02C /* XXLazyArrowr@3x.png */,
+			);
+			name = XXView;
 			sourceTree = "<group>";
 		};
 		841D209E1CEB96E9002B6074 = {
@@ -396,9 +410,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52CEE5911CF5B86E00C1D02C /* XXLazyArrowr@3x.png in Resources */,
 				841D20BA1CEB96EA002B6074 /* LaunchScreen.storyboard in Resources */,
 				841D20B71CEB96EA002B6074 /* Assets.xcassets in Resources */,
+				52CEE58F1CF5B86E00C1D02C /* XXLazyArrowr.png in Resources */,
 				841D20B51CEB96EA002B6074 /* Main.storyboard in Resources */,
+				52CEE5901CF5B86E00C1D02C /* XXLazyArrowr@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +456,7 @@
 				841D20AF1CEB96EA002B6074 /* AppDelegate.m in Sources */,
 				52482F4D1CEC08340094734A /* UIFont+XXExtension.m in Sources */,
 				52482F511CEC08340094734A /* XXLazySetView.m in Sources */,
+				52CEE58B1CF5B58900C1D02C /* XXButtonReplaceCell.m in Sources */,
 				5257F8DA1CF5A75100CF3849 /* NSArray+MASAdditions.m in Sources */,
 				52482F4E1CEC08340094734A /* UILabel+XXExtension.m in Sources */,
 				5257F8D91CF5A75100CF3849 /* MASViewConstraint.m in Sources */,

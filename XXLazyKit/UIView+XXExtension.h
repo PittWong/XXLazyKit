@@ -10,6 +10,10 @@
 
 @interface UIView (XXExtension)
 
+#define XXMarginFontLeft        15
+#define XXMarginFontRight       -15
+
+
 @property (nonatomic, assign) CGFloat x;
 @property (nonatomic, assign) CGFloat y;
 @property (nonatomic, assign) CGFloat centerX;

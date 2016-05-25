@@ -66,21 +66,23 @@
     
 }
 
++(UIColor *)xxLineColor {
+    return [UIColor colorWithHexString:@"e5e5e5"];
+}
 
-
-+ (UIColor *)textColor333333 {
++ (UIColor *)xxTextColor333333 {
     return [UIColor colorWithHexString:@"333333"];
 }//333333
-+ (UIColor *)textColor666666 {
++ (UIColor *)xxTextColor666666 {
     return [UIColor colorWithHexString:@"666666"];
 }//666666
-+ (UIColor *)textColor7c7c7c {
++ (UIColor *)xxTextColor7c7c7c {
     return [UIColor colorWithHexString:@"7c7c7c"];
 }//7c7c7c
-+ (UIColor *)textColor999999 {
++ (UIColor *)xxTextColor999999 {
     return [UIColor colorWithHexString:@"999999"];
 }//999999
-+ (UIColor *)textColoraaaaaa {
++ (UIColor *)xxTextColoraaaaaa {
     return [UIColor colorWithHexString:@"aaaaaa"];
 }//aaaaaa
 @end
