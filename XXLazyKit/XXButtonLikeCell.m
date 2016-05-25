@@ -1,0 +1,179 @@
+//
+//  XXButtonLikeCell.m
+//  ToolsApp
+//
+//  Created by 王旭 on 16/5/20.
+//  Copyright © 2016年 新网聚联. All rights reserved.
+//
+
+#import "XXButtonLikeCell.h"
+#import "Masonry.h"
+#import "UIView+XXExtension.h"
+#import "UIFont+XXExtension.h"
+#import "XXLazyCreateView.h"
+
+@interface XXButtonLikeCell ()
+
+@property (nonatomic ,weak) UILabel *leftTitleLabel;
+@property (nonatomic ,weak) UILabel *messageLabel;
+@property (nonatomic, weak) UIView *rightView;
+@property (nonatomic ,weak) UIView *line;
+@property (nonatomic ,weak) UITextField *textField;
+
+@property (nonatomic ,strong) UISwitch *selectedView;
+
+@end
+
+@implementation XXButtonLikeCell
+
+
+- (void)addTarget:(id)target action:(SEL)action messageSide:(XXButtonLikeCellMessageSide)messageSide Title:(NSString *)title Tag:(NSInteger)tag {
+    self.title = title;
+    self.tag = tag;
+    [self addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    switch (messageSide) {
+        case XXButtonLikeCellMessageSideLeft:
+            self.messageLabel.textAlignment = NSTextAlignmentLeft;
+            self.textField.textAlignment = NSTextAlignmentLeft;
+            break;
+        case XXButtonLikeCellMessageSideRight:
+            self.messageLabel.textAlignment = NSTextAlignmentRight;
+            self.textField.textAlignment = NSTextAlignmentRight;
+            break;
+        case XXButtonLikeCellMessageSideCenter:
+            self.messageLabel.textAlignment = NSTextAlignmentCenter;
+            self.textField.textAlignment = NSTextAlignmentCenter;
+            break;
+    }
+}
+
+- (void)setQuickEditWithKeyboardType:(UIKeyboardType) keyboardType {
+    self.textField.hidden = NO;
+    self.textField.keyboardType = keyboardType;
+}
+
+- (void)setTitle:(NSString *)title {
+    _title = title;
+    self.leftTitleLabel.text = title;
+}
+- (void)setMessage:(NSString *)message {
+    self.messageLabel.text = message;
+}
+- (NSString *)message {
+    return self.messageLabel.text ? self.messageLabel.text : self.textField.text;
+}
+- (void)setSwitchOn:(BOOL)switchOn {
+    self.selectedView.on = switchOn;
+}
+- (BOOL)switchOn {
+    return self.selectedView.isOn;
+}
+-(void)setLineHidden:(BOOL)lineHidden {
+    _lineHidden = lineHidden;
+    self.line.hidden = lineHidden;
+}
+
+- (void)setAccessoryType:(XXButtonLikeCellAccessoryType)accessoryType {
+    _accessoryType = accessoryType;
+    
+    if (accessoryType == XXButtonLikeCellAccessoryIndicator ) {
+        UIImageView *imageView = [[UIImageView alloc]init];
+        imageView.image = [UIImage imageNamed:@"arrowr"];
+        imageView.frame = CGRectMake(0, 0, 7, 11);
+        [self setupRightViewSubView:imageView];
+
+    }else if (accessoryType == XXButtonLikeCellAccessorySwitch) {
+        self.selectedView = [[UISwitch alloc]init];
+        [self setupRightViewSubView:self.selectedView];
+    }
+}
+- (void)setAccessoryView:(UIView *)accessoryView {
+    _accessoryView = accessoryView;
+    [self setupRightViewSubView:accessoryView];
+}
+- (void)setupRightViewSubView:(UIView *)subView {
+    [self.rightView addSubview:subView];
+    [subView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.rightView);
+        make.centerY.equalTo(self.rightView);
+        make.width.equalTo(@(subView.width));
+        make.height.equalTo(@(subView.height));
+    }];
+    [self setupUI];
+}
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self setupProperty];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self setupUI];
+        });
+    }
+    return self;
+}
+
+- (void)setupProperty {
+    self.line.backgroundColor = [UIColor colorWithWhite:224/255.0 alpha:1];//e5e5e5
+    self.line.hidden = self.lineHidden;
+    
+    self.leftTitleLabel.textColor = [UIColor colorWithWhite:51/255.0 alpha:1];//333333
+    self.leftTitleLabel.font = [UIFont xxTextFont14];
+    
+    self.messageLabel.textColor = [UIColor colorWithWhite:151/255.0 alpha:1];//999999
+    self.messageLabel.font = [UIFont xxTextFont14];
+    self.messageLabel.textAlignment = NSTextAlignmentLeft;
+    
+    self.textField.textColor = [UIColor colorWithWhite:102/255.0 alpha:1];//666666
+    self.textField.font = [UIFont xxTextFont14];
+    self.textField.textAlignment = NSTextAlignmentRight;
+    self.textField.hidden = YES;
+}
+
+- (void)setupUI {
+    CGFloat rightViewWidth = self.rightView.subviews.count ? 50 : 0;
+    if (self.accessoryType == XXButtonLikeCellAccessoryIndicator) {
+        rightViewWidth = 10;
+    }
+    
+    [self.leftTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self).offset(15);
+        make.centerY.equalTo(self);
+        make.height.equalTo(self);
+    }];
+    [self.rightView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self).offset(-15);
+        make.centerY.equalTo(self);
+        make.height.equalTo(self);
+        make.width.equalTo(@(rightViewWidth));
+    }];
+    [self.messageLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self).offset(90);
+        make.centerY.equalTo(self);
+        make.height.equalTo(self);
+        make.right.equalTo(self.rightView.mas_left).offset(-2);
+    }];
+    [self.line mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self).offset(15);
+        make.right.equalTo(self);
+        make.bottom.equalTo(self.mas_bottom);
+        make.height.equalTo(@1);
+    }];
+    
+    [self.textField mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.messageLabel);
+        make.right.equalTo(self.messageLabel);
+        make.top.equalTo(self.messageLabel);
+        make.bottom.equalTo(self.messageLabel);
+    }];
+}
+
+XXLazyLabel(self, leftTitleLabel)
+XXLazyLabel(self, messageLabel)
+XXLazyView(self, rightView)
+XXLazyView(self, line)
+
+XXLazyTextField(self, textField)
+
+
+@end

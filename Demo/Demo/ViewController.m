@@ -5,7 +5,7 @@
 //  Created by 王旭 on 16/5/18.
 //  Copyright © 2016年 Pitt. All rights reserved.
 //
-#import "XXExtensionHeader.h"
+#import "XXLazyKitHeader.h"
 
 #import "ViewController.h"
 

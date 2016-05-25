@@ -20,6 +20,8 @@ FOUNDATION_EXPORT const unsigned char XXKitVersionString[];
 #import <XXLazyKit/XXLazySetView.h>
 #import <XXLazyKit/XXLazyCreateView.h>
 
+#import <XXLazyKit/XXButtonLikeCell.h>
+
 
 #else
 
@@ -35,6 +37,7 @@ FOUNDATION_EXPORT const unsigned char XXKitVersionString[];
 #import "XXLazySetView.h"
 #import "XXLazyCreateView.h"
 
+#import "XXButtonLikeCell.h"
 
 
 #endif

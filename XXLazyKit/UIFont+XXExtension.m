@@ -10,37 +10,37 @@
 
 @implementation UIFont (XXExtension)
 
-+ (UIFont *)textFont10 {
++ (UIFont *)xxTextFont10 {
     return [UIFont systemFontOfSize:10];
 }
-+ (UIFont *)textFont11 {
++ (UIFont *)xxTextFont11 {
     return [UIFont systemFontOfSize:11];
 }
-+ (UIFont *)textFont12 {
++ (UIFont *)xxTextFont12 {
     return [UIFont systemFontOfSize:12];
 }
-+ (UIFont *)textFont13 {
++ (UIFont *)xxTextFont13 {
     return [UIFont systemFontOfSize:13];
 }
-+ (UIFont *)textFont14 {
++ (UIFont *)xxTextFont14 {
     return [UIFont systemFontOfSize:14];
 }
-+ (UIFont *)textFont15 {
++ (UIFont *)xxTextFont15 {
     return [UIFont systemFontOfSize:15];
 }
-+ (UIFont *)textFont16 {
++ (UIFont *)xxTextFont16 {
     return [UIFont systemFontOfSize:16];
 }
-+ (UIFont *)textFont17 {
++ (UIFont *)xxTextFont17 {
     return [UIFont systemFontOfSize:17];
 }
-+ (UIFont *)textFont18 {
++ (UIFont *)xxTextFont18 {
     return [UIFont systemFontOfSize:18];
 }
-+ (UIFont *)textFont20 {
++ (UIFont *)xxTextFont20 {
     return [UIFont systemFontOfSize:20];
 }
-+ (UIFont *)textFont26 {
++ (UIFont *)xxTextFont26 {
     return [UIFont systemFontOfSize:26];
     
 }

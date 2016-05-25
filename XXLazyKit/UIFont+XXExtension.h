@@ -9,15 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @interface UIFont (XXExtension)
-+ (UIFont *)textFont10;
-+ (UIFont *)textFont11;
-+ (UIFont *)textFont12;
-+ (UIFont *)textFont13;
-+ (UIFont *)textFont14;
-+ (UIFont *)textFont15;
-+ (UIFont *)textFont16;
-+ (UIFont *)textFont17;
-+ (UIFont *)textFont18;
-+ (UIFont *)textFont20;
-+ (UIFont *)textFont26;
++ (UIFont *)xxTextFont10;
++ (UIFont *)xxTextFont11;
++ (UIFont *)xxTextFont12;
++ (UIFont *)xxTextFont13;
++ (UIFont *)xxTextFont14;
++ (UIFont *)xxTextFont15;
++ (UIFont *)xxTextFont16;
++ (UIFont *)xxTextFont17;
++ (UIFont *)xxTextFont18;
++ (UIFont *)xxTextFont20;
++ (UIFont *)xxTextFont26;
 @end
