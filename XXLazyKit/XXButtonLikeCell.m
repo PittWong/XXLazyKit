@@ -78,7 +78,7 @@
     
     if (accessoryType == XXButtonLikeCellAccessoryIndicator ) {
         UIImageView *imageView = [[UIImageView alloc]init];
-        imageView.image = [UIImage imageNamed:@"arrowr"];
+        imageView.image = [UIImage imageNamed:@"XXLazyKitArrowr"];
         imageView.frame = CGRectMake(0, 0, 7, 11);
         [self setupRightViewSubView:imageView];
 
