@@ -18,6 +18,7 @@
 		52482F4F1CEC08340094734A /* UIView+XXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 52482F421CEC08340094734A /* UIView+XXExtension.m */; };
 		52482F501CEC08340094734A /* XXLazyCreateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52482F441CEC08340094734A /* XXLazyCreateView.m */; };
 		52482F511CEC08340094734A /* XXLazySetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52482F471CEC08340094734A /* XXLazySetView.m */; };
+		5256F26C1CF6953A00C92749 /* XXButtonLikeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5256F26B1CF6953A00C92749 /* XXButtonLikeCell.m */; };
 		5257F8D41CF5A75100CF3849 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5257F8BC1CF5A75100CF3849 /* MASCompositeConstraint.m */; };
 		5257F8D51CF5A75100CF3849 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5257F8BF1CF5A75100CF3849 /* MASConstraint.m */; };
 		5257F8D61CF5A75100CF3849 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5257F8C11CF5A75100CF3849 /* MASConstraintMaker.m */; };
@@ -28,7 +29,6 @@
 		5257F8DB1CF5A75100CF3849 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5257F8CE1CF5A75100CF3849 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		5257F8DC1CF5A75100CF3849 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5257F8D01CF5A75100CF3849 /* View+MASAdditions.m */; };
 		5257F8DD1CF5A75100CF3849 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5257F8D31CF5A75100CF3849 /* ViewController+MASAdditions.m */; };
-		52CEE58B1CF5B58900C1D02C /* XXButtonReplaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52CEE58A1CF5B58900C1D02C /* XXButtonReplaceCell.m */; };
 		52CEE58F1CF5B86E00C1D02C /* XXLazyArrowr.png in Resources */ = {isa = PBXBuildFile; fileRef = 52CEE58C1CF5B86E00C1D02C /* XXLazyArrowr.png */; };
 		52CEE5901CF5B86E00C1D02C /* XXLazyArrowr@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52CEE58D1CF5B86E00C1D02C /* XXLazyArrowr@2x.png */; };
 		52CEE5911CF5B86E00C1D02C /* XXLazyArrowr@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52CEE58E1CF5B86E00C1D02C /* XXLazyArrowr@3x.png */; };
@@ -82,6 +82,8 @@
 		52482F451CEC08340094734A /* XXLazyKitHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXLazyKitHeader.h; sourceTree = "<group>"; };
 		52482F461CEC08340094734A /* XXLazySetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXLazySetView.h; sourceTree = "<group>"; };
 		52482F471CEC08340094734A /* XXLazySetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXLazySetView.m; sourceTree = "<group>"; };
+		5256F26A1CF6953A00C92749 /* XXButtonLikeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXButtonLikeCell.h; sourceTree = "<group>"; };
+		5256F26B1CF6953A00C92749 /* XXButtonLikeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXButtonLikeCell.m; sourceTree = "<group>"; };
 		5257F8BB1CF5A75100CF3849 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		5257F8BC1CF5A75100CF3849 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
 		5257F8BD1CF5A75100CF3849 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -107,8 +109,6 @@
 		5257F8D11CF5A75100CF3849 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		5257F8D21CF5A75100CF3849 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		5257F8D31CF5A75100CF3849 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
-		52CEE5891CF5B58900C1D02C /* XXButtonReplaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXButtonReplaceCell.h; sourceTree = "<group>"; };
-		52CEE58A1CF5B58900C1D02C /* XXButtonReplaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXButtonReplaceCell.m; sourceTree = "<group>"; };
 		52CEE58C1CF5B86E00C1D02C /* XXLazyArrowr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = XXLazyArrowr.png; sourceTree = "<group>"; };
 		52CEE58D1CF5B86E00C1D02C /* XXLazyArrowr@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "XXLazyArrowr@2x.png"; sourceTree = "<group>"; };
 		52CEE58E1CF5B86E00C1D02C /* XXLazyArrowr@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "XXLazyArrowr@3x.png"; sourceTree = "<group>"; };
@@ -239,8 +239,8 @@
 		52CEE5881CF5B4D200C1D02C /* XXView */ = {
 			isa = PBXGroup;
 			children = (
-				52CEE5891CF5B58900C1D02C /* XXButtonReplaceCell.h */,
-				52CEE58A1CF5B58900C1D02C /* XXButtonReplaceCell.m */,
+				5256F26A1CF6953A00C92749 /* XXButtonLikeCell.h */,
+				5256F26B1CF6953A00C92749 /* XXButtonLikeCell.m */,
 				52CEE58C1CF5B86E00C1D02C /* XXLazyArrowr.png */,
 				52CEE58D1CF5B86E00C1D02C /* XXLazyArrowr@2x.png */,
 				52CEE58E1CF5B86E00C1D02C /* XXLazyArrowr@3x.png */,
@@ -516,6 +516,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5257F8D51CF5A75100CF3849 /* MASConstraint.m in Sources */,
+				5256F26C1CF6953A00C92749 /* XXButtonLikeCell.m in Sources */,
 				5257F8DD1CF5A75100CF3849 /* ViewController+MASAdditions.m in Sources */,
 				52482F501CEC08340094734A /* XXLazyCreateView.m in Sources */,
 				52482F4F1CEC08340094734A /* UIView+XXExtension.m in Sources */,
@@ -531,7 +532,6 @@
 				841D20AF1CEB96EA002B6074 /* AppDelegate.m in Sources */,
 				52482F4D1CEC08340094734A /* UIFont+XXExtension.m in Sources */,
 				52482F511CEC08340094734A /* XXLazySetView.m in Sources */,
-				52CEE58B1CF5B58900C1D02C /* XXButtonReplaceCell.m in Sources */,
 				5257F8DA1CF5A75100CF3849 /* NSArray+MASAdditions.m in Sources */,
 				52482F4E1CEC08340094734A /* UILabel+XXExtension.m in Sources */,
 				5257F8D91CF5A75100CF3849 /* MASViewConstraint.m in Sources */,

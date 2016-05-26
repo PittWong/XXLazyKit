@@ -1,19 +1,19 @@
 //
-//  XXButtonReplaceCell.m
+//  XXButtonLikeCell.m
 //  Demo
 //
 //  Created by 王旭 on 16/5/25.
 //  Copyright © 2016年 Pitt. All rights reserved.
 //
 
-#import "XXButtonReplaceCell.h"
+#import "XXButtonLikeCell.h"
 #import "Masonry.h"
 #import "UIColor+XXExtension.h"
 #import "UIFont+XXExtension.h"
 #import "UIView+XXExtension.h"
 #import "XXLazyCreateView.h"
 
-@interface XXButtonReplaceCell ()
+@interface XXButtonLikeCell ()
 
 @property (nonatomic ,strong) UILabel *leftTitleLabel;
 @property (nonatomic ,strong) UILabel *messageLabel;
@@ -25,23 +25,23 @@
 
 @end
 
-@implementation XXButtonReplaceCell
+@implementation XXButtonLikeCell
 
 
-- (void)addTarget:(id)target action:(SEL)action messageSide:(XXButtonReplaceCellMessageSide)messageSide Title:(NSString *)title Tag:(NSInteger)tag {
+- (void)addTarget:(id)target action:(SEL)action messageSide:(XXButtonLikeCellMessageSide)messageSide Title:(NSString *)title Tag:(NSInteger)tag {
     self.title = title;
     self.tag = tag;
     [self addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     switch (messageSide) {
-        case XXButtonReplaceCellMessageSideLeft:
+            case XXButtonLikeCellMessageSideLeft:
             self.messageLabel.textAlignment = NSTextAlignmentLeft;
             self.textField.textAlignment = NSTextAlignmentLeft;
             break;
-        case XXButtonReplaceCellMessageSideRight:
+            case XXButtonLikeCellMessageSideRight:
             self.messageLabel.textAlignment = NSTextAlignmentRight;
             self.textField.textAlignment = NSTextAlignmentRight;
             break;
-        case XXButtonReplaceCellMessageSideCenter:
+            case XXButtonLikeCellMessageSideCenter:
             self.messageLabel.textAlignment = NSTextAlignmentCenter;
             self.textField.textAlignment = NSTextAlignmentCenter;
             break;
@@ -74,16 +74,16 @@
     self.line.hidden = lineHidden;
 }
 
-- (void)setAccessoryType:(XXButtonReplaceCellAccessoryType)accessoryType {
+- (void)setAccessoryType:(XXButtonLikeCellAccessoryType)accessoryType {
     _accessoryType = accessoryType;
     
-    if (accessoryType == XXButtonReplaceCellAccessoryIndicator ) {
+    if (accessoryType == XXButtonLikeCellAccessoryIndicator ) {
         UIImageView *imageView = [[UIImageView alloc]init];
         imageView.image = [UIImage imageNamed:@"XXLazyArrowr"];
         imageView.frame = CGRectMake(0, 0, 7, 11);
         [self setupRightViewSubView:imageView];
         
-    }else if (accessoryType == XXButtonReplaceCellAccessorySwitch) {
+    }else if (accessoryType == XXButtonLikeCellAccessorySwitch) {
         self.selectedView = [[UISwitch alloc]init];
         [self setupRightViewSubView:self.selectedView];
     }
@@ -133,7 +133,7 @@
 
 - (void)setupUI {
     CGFloat rightViewWidth = self.rightView.subviews.count ? 50 : 0;
-    if (self.accessoryType == XXButtonReplaceCellAccessoryIndicator) {
+    if (self.accessoryType == XXButtonLikeCellAccessoryIndicator) {
         rightViewWidth = 10;
     }
     
@@ -178,3 +178,4 @@ XXLazyTextField(self, textField)
 
 
 @end
+
