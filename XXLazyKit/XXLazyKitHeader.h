@@ -20,7 +20,7 @@
 #import <XXLazyKit/XXLazySetView.h>
 #import <XXLazyKit/XXLazyCreateView.h>
 
-#import <XXLazyKit/XXButtonReplaceCell.h>
+#import <XXLazyKit/XXButtonLikeCell.h>
 
 
 
@@ -38,7 +38,7 @@
 #import "XXLazySetView.h"
 #import "XXLazyCreateView.h"
 
-#import "XXButtonReplaceCell.h"
+#import "XXButtonLikeCell.h"
 
 
 
