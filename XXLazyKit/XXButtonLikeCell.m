@@ -78,8 +78,12 @@
     _accessoryType = accessoryType;
     
     if (accessoryType == XXButtonLikeCellAccessoryIndicator ) {
+        
+#define XXLazyKitSrcName(file) [@"XXLazyKit.bundle" stringByAppendingPathComponent:file]
+#define XXLazyKitFrameworkSrcName(file) [@"Frameworks/XXLazyKit.framework/XXLazyKit.bundle" stringByAppendingPathComponent:file]
+    UIImage *image = [UIImage imageNamed:XXLazyKitSrcName(@"XXLazyArrowr.png")] ?: [UIImage imageNamed:XXLazyKitFrameworkSrcName(@"XXLazyArrowr.png")];
         UIImageView *imageView = [[UIImageView alloc]init];
-        imageView.image = [UIImage imageNamed:@"XXLazyArrowr"];
+        imageView.image = image;
         imageView.frame = CGRectMake(0, 0, 7, 11);
         [self setupRightViewSubView:imageView];
         
