@@ -40,7 +40,7 @@ s.requires_arc = true
 
 s.source_files = 'XXLazyKit/*'
 
-# s.resources = 'Assets'
+# s.resources = 'XXLazyKit/XXLazyKit.bundle'
 
 
 
