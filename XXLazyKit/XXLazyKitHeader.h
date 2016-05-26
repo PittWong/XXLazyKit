@@ -5,8 +5,8 @@
 
 #if __has_include(<XXLazyKit/XXLazyKitHeader.h>)
 
-FOUNDATION_EXPORT double XXKitVersionNumber;
-FOUNDATION_EXPORT const unsigned char XXKitVersionString[];
+//FOUNDATION_EXPORT double XXKitVersionNumber;
+//FOUNDATION_EXPORT const unsigned char XXKitVersionString[];
 
 #import <XXLazyKit/NSDate+XXExtension.h>
 #import <XXLazyKit/NSString+XXExtension.h>

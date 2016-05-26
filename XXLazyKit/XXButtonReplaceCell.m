@@ -15,11 +15,11 @@
 
 @interface XXButtonReplaceCell ()
 
-@property (nonatomic ,weak) UILabel *leftTitleLabel;
-@property (nonatomic ,weak) UILabel *messageLabel;
-@property (nonatomic, weak) UIView *rightView;
-@property (nonatomic ,weak) UIView *line;
-@property (nonatomic ,weak) UITextField *textField;
+@property (nonatomic ,strong) UILabel *leftTitleLabel;
+@property (nonatomic ,strong) UILabel *messageLabel;
+@property (nonatomic, strong) UIView *rightView;
+@property (nonatomic ,strong) UIView *line;
+@property (nonatomic ,strong) UITextField *textField;
 
 @property (nonatomic ,strong) UISwitch *selectedView;
 
