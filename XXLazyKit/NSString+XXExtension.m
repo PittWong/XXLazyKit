@@ -67,5 +67,8 @@
     return result;
 }
 
+- (BOOL)isHaveString {
+    return self!=nil&&self.length>0&&self != @"null"&&self != @"";
+}
 
 @end

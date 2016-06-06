@@ -11,6 +11,7 @@
 
 #import "XXButtonLikeCell.h"
 #import "Masonry.h"
+#import <Masonry.h>
 #import "UIColor+XXExtension.h"
 #import "UIFont+XXExtension.h"
 #import "UIView+XXExtension.h"
@@ -25,6 +26,9 @@
 @property (nonatomic ,strong) UITextField *textField;
 
 @property (nonatomic ,strong) UISwitch *selectedView;
+@property (nonatomic ,assign) NSInteger minLength;
+@property (nonatomic ,assign) NSInteger maxLength;
+@property (nonatomic ,assign) BOOL isPlaceHolder;
 
 @end
 
@@ -35,16 +39,20 @@
     self.title = title;
     self.tag = tag;
     [self addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    self.messageSide = messageSide;
+}
+
+- (void)setMessageSide:(XXButtonLikeCellMessageSide)messageSide {
     switch (messageSide) {
-            case XXButtonLikeCellMessageSideLeft:
+        case XXButtonLikeCellMessageSideLeft:
             self.messageLabel.textAlignment = NSTextAlignmentLeft;
             self.textField.textAlignment = NSTextAlignmentLeft;
             break;
-            case XXButtonLikeCellMessageSideRight:
+        case XXButtonLikeCellMessageSideRight:
             self.messageLabel.textAlignment = NSTextAlignmentRight;
             self.textField.textAlignment = NSTextAlignmentRight;
             break;
-            case XXButtonLikeCellMessageSideCenter:
+        case XXButtonLikeCellMessageSideCenter:
             self.messageLabel.textAlignment = NSTextAlignmentCenter;
             self.textField.textAlignment = NSTextAlignmentCenter;
             break;
@@ -52,8 +60,30 @@
 }
 
 - (void)setQuickEditWithKeyboardType:(UIKeyboardType) keyboardType {
+    _isPlaceHolder = YES;
     self.textField.hidden = NO;
     self.textField.keyboardType = keyboardType;
+}
+- (void)setQuickEditWithKeyboardType:(UIKeyboardType)keyboardType isPlaceHolder:(BOOL)isPlaceHolder {
+    _isPlaceHolder = isPlaceHolder;
+    self.textField.hidden = NO;
+    self.textField.keyboardType = keyboardType;
+}
+- (void)setQuickEditWithKeyboardType:(UIKeyboardType) keyboardType minLength:(NSInteger)minLength maxLength:(NSInteger)maxLength {
+    [self setQuickEditWithKeyboardType:keyboardType];
+    self.minLength = minLength;
+    self.maxLength = maxLength;
+    [self.textField addTarget:self action:@selector(textFieldEditChanged) forControlEvents:UIControlEventEditingChanged];
+}
+- (void)textFieldEditChanged {
+    if (self.textField.text.length<self.minLength) {
+        self.textField.textColor = [UIColor redColor];
+    }else {
+        self.textField.textColor = [UIColor xxTextColor999999];
+    }
+    if (self.maxLength&&self.textField.text.length>=self.maxLength) {
+        self.textField.text = [self.textField.text substringToIndex:self.maxLength];
+    }
 }
 
 - (void)setTitle:(NSString *)title {
@@ -61,10 +91,20 @@
     self.leftTitleLabel.text = title;
 }
 - (void)setMessage:(NSString *)message {
-    self.messageLabel.text = message;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (self.textField.hidden) {
+            self.messageLabel.text = message;
+        }else {
+            if (_isPlaceHolder) {
+                self.textField.placeholder = message;
+            }else {
+                self.textField.text = message;
+            }
+        }
+    });
 }
 - (NSString *)message {
-    return self.messageLabel.text ? self.messageLabel.text : self.textField.text;
+    return self.messageLabel.text.length ? self.messageLabel.text : self.textField.text;
 }
 - (void)setSwitchOn:(BOOL)switchOn {
     self.selectedView.on = switchOn;

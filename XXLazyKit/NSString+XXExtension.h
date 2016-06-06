@@ -35,4 +35,6 @@
 
 - (NSString *)md5String;
 
+- (BOOL)isHaveString;
+
 @end

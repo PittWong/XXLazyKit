@@ -28,8 +28,13 @@ typedef NS_ENUM(NSInteger, XXButtonLikeCellAccessoryType) {             //右侧
 @property (nonatomic, strong) UIView *accessoryView;                  // if set, use custom view. ignore accessoryType. tracks if enabled can calls accessory action
 @property (nonatomic ,assign) BOOL switchOn;                //当选择了XXButtonLikeCellAccessorySwitch后有意义
 @property (nonatomic ,assign) BOOL lineHidden;
+@property (nonatomic) XXButtonLikeCellMessageSide messageSide;
 
 - (void)addTarget:(id)target action:(SEL)action messageSide:(XXButtonLikeCellMessageSide)messageSide Title:(NSString *)title Tag:(NSInteger)tag ;
 - (void)setQuickEditWithKeyboardType:(UIKeyboardType) keyboardType;    //需要编辑时设置此项
+
+- (void)setQuickEditWithKeyboardType:(UIKeyboardType) keyboardType isPlaceHolder:(BOOL)isPlaceHolder;    //需要编辑时设置此项
+
+- (void)setQuickEditWithKeyboardType:(UIKeyboardType) keyboardType minLength:(NSInteger)minLength maxLength:(NSInteger)maxLength;    //需要编辑时设置此项
 
 @end

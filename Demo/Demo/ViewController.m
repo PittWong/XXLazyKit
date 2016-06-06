@@ -12,14 +12,15 @@
 @interface ViewController ()
 @property (nonatomic ,weak) UIButton *button;
 @property (nonatomic ,weak) UITableView *tableView;
+@property (nonatomic ,weak) XXChartView *chartView;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    
+    self.chartView.frame = CGRectMake(0, 100, self.view.width, 120);
+    self.chartView.tintColor = [UIColor redColor];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -32,4 +33,5 @@
 }
 XXLazyButton(self.view, button)
 XXLazyTableView(self.view, tableView)
+XXLazyAnyView(self.view, chartView, XXChartView)
 @end
