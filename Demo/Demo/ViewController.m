@@ -12,7 +12,7 @@
 @interface ViewController ()
 @property (nonatomic ,weak) UIButton *button;
 @property (nonatomic ,weak) UITableView *tableView;
-@property (nonatomic ,weak) XXChartView *chartView;
+@property (nonatomic ,weak) XXLineChartView *chartView;
 @end
 
 @implementation ViewController
@@ -33,5 +33,5 @@
 }
 XXLazyButton(self.view, button)
 XXLazyTableView(self.view, tableView)
-XXLazyAnyView(self.view, chartView, XXChartView)
+XXLazyAnyView(self.view, chartView, XXLineChartView)
 @end

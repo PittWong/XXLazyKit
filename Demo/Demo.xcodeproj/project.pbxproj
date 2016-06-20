@@ -19,7 +19,8 @@
 		52482F501CEC08340094734A /* XXLazyCreateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52482F441CEC08340094734A /* XXLazyCreateView.m */; };
 		52482F511CEC08340094734A /* XXLazySetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52482F471CEC08340094734A /* XXLazySetView.m */; };
 		5256F26C1CF6953A00C92749 /* XXButtonLikeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5256F26B1CF6953A00C92749 /* XXButtonLikeCell.m */; };
-		52897ED41D0513D5001E0E3F /* XXChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52897ED31D0513D5001E0E3F /* XXChartView.m */; };
+		528620F61D17B5D200627117 /* XXColumnChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 528620F51D17B5D200627117 /* XXColumnChartView.m */; };
+		52897ED41D0513D5001E0E3F /* XXLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52897ED31D0513D5001E0E3F /* XXLineChartView.m */; };
 		841D20AC1CEB96EA002B6074 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 841D20AB1CEB96EA002B6074 /* main.m */; };
 		841D20AF1CEB96EA002B6074 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 841D20AE1CEB96EA002B6074 /* AppDelegate.m */; };
 		841D20B21CEB96EA002B6074 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841D20B11CEB96EA002B6074 /* ViewController.m */; };
@@ -72,8 +73,10 @@
 		52482F471CEC08340094734A /* XXLazySetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXLazySetView.m; sourceTree = "<group>"; };
 		5256F26A1CF6953A00C92749 /* XXButtonLikeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXButtonLikeCell.h; sourceTree = "<group>"; };
 		5256F26B1CF6953A00C92749 /* XXButtonLikeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXButtonLikeCell.m; sourceTree = "<group>"; };
-		52897ED21D0513D5001E0E3F /* XXChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXChartView.h; sourceTree = "<group>"; };
-		52897ED31D0513D5001E0E3F /* XXChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXChartView.m; sourceTree = "<group>"; };
+		528620F41D17B5D200627117 /* XXColumnChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXColumnChartView.h; sourceTree = "<group>"; };
+		528620F51D17B5D200627117 /* XXColumnChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXColumnChartView.m; sourceTree = "<group>"; };
+		52897ED21D0513D5001E0E3F /* XXLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXLineChartView.h; sourceTree = "<group>"; };
+		52897ED31D0513D5001E0E3F /* XXLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXLineChartView.m; sourceTree = "<group>"; };
 		841D20A71CEB96EA002B6074 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		841D20AB1CEB96EA002B6074 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		841D20AD1CEB96EA002B6074 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -171,8 +174,10 @@
 			children = (
 				5256F26A1CF6953A00C92749 /* XXButtonLikeCell.h */,
 				5256F26B1CF6953A00C92749 /* XXButtonLikeCell.m */,
-				52897ED21D0513D5001E0E3F /* XXChartView.h */,
-				52897ED31D0513D5001E0E3F /* XXChartView.m */,
+				52897ED21D0513D5001E0E3F /* XXLineChartView.h */,
+				52897ED31D0513D5001E0E3F /* XXLineChartView.m */,
+				528620F41D17B5D200627117 /* XXColumnChartView.h */,
+				528620F51D17B5D200627117 /* XXColumnChartView.m */,
 			);
 			name = XXView;
 			sourceTree = "<group>";
@@ -442,13 +447,14 @@
 			files = (
 				5256F26C1CF6953A00C92749 /* XXButtonLikeCell.m in Sources */,
 				52482F501CEC08340094734A /* XXLazyCreateView.m in Sources */,
-				52897ED41D0513D5001E0E3F /* XXChartView.m in Sources */,
+				52897ED41D0513D5001E0E3F /* XXLineChartView.m in Sources */,
 				52482F4F1CEC08340094734A /* UIView+XXExtension.m in Sources */,
 				52482F491CEC08340094734A /* NSString+XXExtension.m in Sources */,
 				52482F4B1CEC08340094734A /* UIButton+XXExtension.m in Sources */,
 				841D20B21CEB96EA002B6074 /* ViewController.m in Sources */,
 				52482F4A1CEC08340094734A /* UIBarButtonItem+XXExtension.m in Sources */,
 				841D20AF1CEB96EA002B6074 /* AppDelegate.m in Sources */,
+				528620F61D17B5D200627117 /* XXColumnChartView.m in Sources */,
 				52482F4D1CEC08340094734A /* UIFont+XXExtension.m in Sources */,
 				52482F511CEC08340094734A /* XXLazySetView.m in Sources */,
 				52482F4E1CEC08340094734A /* UILabel+XXExtension.m in Sources */,

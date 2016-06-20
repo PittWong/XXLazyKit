@@ -27,4 +27,7 @@
  *  @return 时间字串
  */
 +(NSString *)stringWithDate:(NSDate *)date dateFormatter:(NSString *)dateFormatterString;
+
+
++(NSString *)weekdayStringFromDate:(NSDate*)inputDate;
 @end

@@ -1,5 +1,5 @@
 //
-//  XXChartView.h
+//  XXLineChartView.h
 //  NewTest
 //
 //  Created by 王旭 on 16/5/31.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XXChartView : UIView
+@interface XXLineChartView : UIView
 
 - (instancetype)initWithValues:(NSArray *)values xTittles:(NSArray *)xTittles yTittleCount:(NSInteger)yTittleCount;
 + (instancetype)chartViewWithValues:(NSArray *)values xTittles:(NSArray *)xTittles yTittleCount:(NSInteger)yTittleCount;

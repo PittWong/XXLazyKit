@@ -1,14 +1,14 @@
 //
-//  XXChartView.m
+//  XXLineChartView.m
 //  NewTest
 //
 //  Created by 王旭 on 16/5/31.
 //  Copyright © 2016年 pitt. All rights reserved.
 //
 
-#import "XXChartView.h"
+#import "XXLineChartView.h"
 
-@interface XXChartView ()
+@interface XXLineChartView ()
 
 
 
@@ -16,7 +16,7 @@
 
 @end
 
-@implementation XXChartView
+@implementation XXLineChartView
 
 + (instancetype)chartViewWithValues:(NSArray *)values xTittles:(NSArray *)xTittles yTittleCount:(NSInteger)yTittleCount {
     return [[self alloc]initWithValues:values xTittles:xTittles yTittleCount:yTittleCount];
@@ -78,6 +78,24 @@
     self.yTittles = yTittles;
 }
 
+#pragma mark - 动画
+
+/**
+ *  填充动画过程
+ *
+ *  @return CABasicAnimation
+ */
+- (CABasicAnimation *)animation{
+    CABasicAnimation * fillAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    fillAnimation.duration = 2;
+    fillAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    fillAnimation.fillMode = kCAFillModeForwards;
+    fillAnimation.removedOnCompletion = NO;
+    fillAnimation.fromValue = @(0.f);
+    fillAnimation.toValue = @(1.f);
+    
+    return fillAnimation;
+}
 
 - (void)drawRect:(CGRect)rect {
     CGFloat width = self.bounds.size.width;
@@ -143,9 +161,11 @@
         [path stroke];
         
         //x轴标题
-//        CGSize strSize = [xTittle sizeWithFont:[UIFont systemFontOfSize:10]];
+        //        CGSize strSize = [xTittle sizeWithFont:[UIFont systemFontOfSize:10]];
         CGSize strSize = [xTittle sizeWithAttributes:@{NSFontAttributeName : [UIFont systemFontOfSize:10]}];
-        [xTittle drawInRect:CGRectMake(x - strSize.width/2, xAxisY + 3, strSize.width, 20)
+        CGFloat xTittleLeftMargin = strSize.width / 2 > margin? strSize.width/2 - margin + 1 : 0;
+        
+        [xTittle drawInRect:CGRectMake(x - strSize.width/2 + xTittleLeftMargin, xAxisY + 3, strSize.width, 20)
              withAttributes:@{NSForegroundColorAttributeName  : self.axisTitleColor,
                               NSFontAttributeName             : [UIFont systemFontOfSize:10]}];
         

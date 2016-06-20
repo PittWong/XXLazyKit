@@ -7,11 +7,15 @@
 //
 
 #import "UILabel+XXExtension.h"
+#import "NSString+XXExtension.h"
 
 @implementation UILabel (XXExtension)
 
 - (void) textLeftTopAlign: (NSString *)desc
 {
+    if (![desc isHaveString]) {
+        return;
+    }
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc]init];
     paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
     paragraphStyle.lineSpacing = 10;// 字体的行间距
