@@ -21,7 +21,8 @@
 #import <XXLazyKit/XXLazyCreateView.h>
 
 #import <XXLazyKit/XXButtonLikeCell.h>
-#import <XXLazyKit/XXChartView.h>
+#import <XXLazyKit/XXLineChartView.h>
+#import <XXLazyKit/XXColumnChartView.h>
 
 
 
@@ -40,7 +41,8 @@
 #import "XXLazyCreateView.h"
 
 #import "XXButtonLikeCell.h"
-#import "XXChartView.h"
+#import "XXLineChartView.h"
+#import "XXColumnChartView.h"
 
 
 
