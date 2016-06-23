@@ -80,7 +80,17 @@
     return self!=nil&&self.length>0&&![self isEqualToString: @"null"];
 }
 
+- (NSString *)pinyinString {
+    NSMutableString *mutableString = [NSMutableString stringWithString:self];
+    CFStringTransform((CFMutableStringRef)mutableString, NULL, kCFStringTransformStripDiacritics, false);
+    
+    NSString *newstr = [mutableString stringByReplacingOccurrencesOfString:@" " withString:@""];
+    return newstr;
+}
 
++ (instancetype)pinyinStringWithSting:(NSString *)string {
+    return [string pinyinString];
+}
 
 //删除aString和bString之间内容 包括aString和bString
 
