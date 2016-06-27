@@ -20,7 +20,7 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-    //testguagua11pitt
+    //testguagua11pittconfig
     [super viewDidLoad];
     self.lineChartView.frame = CGRectMake(0, 100, self.view.width, 120);
     self.lineChartView.tintColor = [UIColor redColor];
