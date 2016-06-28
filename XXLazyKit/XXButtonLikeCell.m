@@ -213,6 +213,24 @@
         make.bottom.equalTo(self.messageLabel);
     }];
 }
+- (void)setupUIBeonedFrame {
+    CGFloat rightViewWidth = self.rightView.subviews.count ? 50 : 0;
+    if (self.accessoryType == XXButtonLikeCellAccessoryIndicator) {
+        rightViewWidth = 10;
+    }
+    self.leftTitleLabel.frame = CGRectMake(XXMarginFontLeft, 0, self.width, self.height);
+    self.rightView.frame = CGRectMake(self.width+XXMarginFontRight-rightViewWidth, 0, rightViewWidth, self.height);
+    self.messageLabel.frame = CGRectMake(90, 0, self.rightView.x-2-90, self.height);
+    self.line.frame = CGRectMake(XXMarginFontLeft, self.height-1, self.width-XXMarginFontLeft, 1);
+    self.textField.frame = self.messageLabel.frame;
+}
+- (void)setupRightViewBeonedFrameSubView:(UIView *)subView {
+    [self.rightView addSubview:subView];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self setupUI];
+        subView.frame = CGRectMake(self.width+XXMarginFontRight-subView.width, self.height/2-subView.height/2, subView.width, subView.height);
+    });
+}
 
 XXLazyLabel(self, leftTitleLabel)
 XXLazyLabel(self, messageLabel)
