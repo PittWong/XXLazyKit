@@ -53,8 +53,11 @@
     self.downColor = [tintColor colorWithAlphaComponent:0.05];
 }
 - (void)setValues:(NSArray *)values {
+    if (values == nil) {
+        values = @[@0];
+    }
     _values = values;
-    NSInteger maxNum = [values[0] integerValue];
+    NSInteger maxNum = [values.firstObject integerValue];
     for (NSNumber *number in values) {
         if (maxNum < number.integerValue) {
             maxNum = number.integerValue;

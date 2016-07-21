@@ -49,7 +49,7 @@ if (highImage) {[self.buttonName setBackgroundImage:[UIImage imageNamed:highImag
 self.viewName.layer.cornerRadius = radius;\
 self.viewName.layer.masksToBounds = YES;\
 self.viewName.layer.borderWidth = 1;\
-self.viewName.layer.borderColor = bordColor.CGColor\
+self.viewName.layer.borderColor = bordColor.CGColor;\
 self.viewName.backgroundColor = bgColor;
 
 
