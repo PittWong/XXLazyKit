@@ -32,7 +32,7 @@
     NSString *resultString = [string removeStringBetweenString:@"<" andString:@">"];
     NSLog(@"%@",resultString);
     
-    resultString = [string stringByReplacingOccurrencesOfString:nil withString:nil];
+//    resultString = [string stringByReplacingOccurrencesOfString:nil withString:nil];
     resultString = [string stringByReplacingCharactersInRange:NSRangeFromString(@"guagu") withString:@""];
     // Do any additional setup after loading the view, typically from a nib.
 }
