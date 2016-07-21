@@ -4,6 +4,7 @@
 > 
 > 3一句宏定义搞定常用控件设置
 
+pod 'XXLazyKit', :git => 'https://github.com/PittWong/XXLazyKit.git'
 
 ####懒加载控件
 ```
