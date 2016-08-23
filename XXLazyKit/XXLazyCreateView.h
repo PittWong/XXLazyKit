@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 //通用view
-#define XXLazyAnyView(superView,viewName,class)  \
+#define XXLazyAnyView(superView,class,viewName)  \
 -(class *)viewName {\
 if (_##viewName == nil) {\
 class *view = [[class alloc]init];\
