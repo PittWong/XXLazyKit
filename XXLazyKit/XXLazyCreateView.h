@@ -9,24 +9,25 @@
 #import <UIKit/UIKit.h>
 
 //通用view
-#define XXLazyAnyView(superView,class,viewName)  \
+#define XXLazyAnyView(class,viewName,superView)  \
 -(class *)viewName {\
 if (_##viewName == nil) {\
 class *view = [[class alloc]init];\
-[superView addSubview:view];\
+UIView *superViewTemp = (UIView *)superView;\
+[superViewTemp addSubview:view];\
 _##viewName = view;}\
 return _##viewName;}
 
 
 //常用系统 view 创建
 
-#define XXLazyView(superView,viewName)        XXLazyAnyView(superView, viewName, UIView)
-#define XXLazyLabel(superView,viewName)       XXLazyAnyView(superView, viewName, UILabel)
-#define XXLazyButton(superView,viewName)      XXLazyAnyView(superView, viewName, UIButton)
-#define XXLazyImageView(superView,viewName)   XXLazyAnyView(superView, viewName, UIImageView)
-#define XXLazyTextField(superView,viewName)   XXLazyAnyView(superView, viewName, UITextField)
-#define XXLazyTextView(superView,viewName)    XXLazyAnyView(superView, viewName, UITextView)
-#define XXLazyTableView(superView,viewName)   XXLazyAnyView(superView, viewName, UITableView)
+#define XXLazyView(superView,viewName)        XXLazyAnyView(UIView,         viewName,superView)
+#define XXLazyLabel(superView,viewName)       XXLazyAnyView(UILabel,        viewName,superView)
+#define XXLazyButton(superView,viewName)      XXLazyAnyView(UIButton,       viewName,superView)
+#define XXLazyImageView(superView,viewName)   XXLazyAnyView(UIImageView,    viewName,superView)
+#define XXLazyTextField(superView,viewName)   XXLazyAnyView(UITextField,    viewName,superView)
+#define XXLazyTextView(superView,viewName)    XXLazyAnyView(UITextView,     viewName,superView)
+#define XXLazyTableView(superView,viewName)   XXLazyAnyView(UITableView,    viewName,superView)
 
 
 
