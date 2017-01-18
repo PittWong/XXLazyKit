@@ -44,9 +44,9 @@
 - (void)buttonClick:(UIButton *)button {
     
 }
-XXLazyButton(self.view, button)
-XXLazyTableView(self.view, tableView)
-XXLazyAnyView(self.view, lineChartView, XXLineChartView)
-XXLazyAnyView(self.view, columnChartView, XXColumnChartView)
+XXLazyButton(button,self.view)
+XXLazyTableView(tableView,self.view)
+//XXLazyAnyView(self.view, lineChartView, XXLineChartView)
+//XXLazyAnyView(self.view, columnChartView, XXColumnChartView)
 
 @end

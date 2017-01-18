@@ -21,13 +21,13 @@ return _##viewName;}
 
 //常用系统 view 创建
 
-#define XXLazyView(superView,viewName)        XXLazyAnyView(UIView,         viewName,superView)
-#define XXLazyLabel(superView,viewName)       XXLazyAnyView(UILabel,        viewName,superView)
-#define XXLazyButton(superView,viewName)      XXLazyAnyView(UIButton,       viewName,superView)
-#define XXLazyImageView(superView,viewName)   XXLazyAnyView(UIImageView,    viewName,superView)
-#define XXLazyTextField(superView,viewName)   XXLazyAnyView(UITextField,    viewName,superView)
-#define XXLazyTextView(superView,viewName)    XXLazyAnyView(UITextView,     viewName,superView)
-#define XXLazyTableView(superView,viewName)   XXLazyAnyView(UITableView,    viewName,superView)
+#define XXLazyView(viewName,superView)        XXLazyAnyView(UIView,         viewName,superView)
+#define XXLazyLabel(viewName,superView)       XXLazyAnyView(UILabel,        viewName,superView)
+#define XXLazyButton(viewName,superView)      XXLazyAnyView(UIButton,       viewName,superView)
+#define XXLazyImageView(viewName,superView)   XXLazyAnyView(UIImageView,    viewName,superView)
+#define XXLazyTextField(viewName,superView)   XXLazyAnyView(UITextField,    viewName,superView)
+#define XXLazyTextView(viewName,superView)    XXLazyAnyView(UITextView,     viewName,superView)
+#define XXLazyTableView(viewName,superView)   XXLazyAnyView(UITableView,    viewName,superView)
 
 
 
